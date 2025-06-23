@@ -82,12 +82,12 @@ const Tabs = () => {
 const Products = () => {
   const { addToCart } = useCart();
   const products: Product[] = [
-    { id: 1, name: 'Kablosuz Kulaklık', price: 100, image: 'https://via.placeholder.com/150' },
-    { id: 2, name: 'Akıllı Saat', price: 150, image: 'https://via.placeholder.com/150' },
-    { id: 3, name: 'Bluetooth Hoparlör', price: 200, image: 'https://via.placeholder.com/150' },
-    { id: 4, name: 'Taşınabilir Şarj Cihazı', price: 120, image: 'https://via.placeholder.com/150' },
-    { id: 5, name: 'Dizüstü Bilgisayar', price: 5000, image: 'https://via.placeholder.com/150' },
-    { id: 6, name: 'Tablet', price: 3000, image: 'https://via.placeholder.com/150' },
+    { id: 1, name: 'Kablosuz Kulaklık', price: 100, image: 'https://vodanet.com.tr/assets/images/poly/Voyager-4220-kulaklik.png' },
+    { id: 2, name: 'Akıllı Saat', price: 150, image: 'https://www.sanalavm.com/ixtech-xee-fit6-akilli-saat-siyah-giyilebilir-teknoloji-ixtech-7954-30-B.png' },
+    { id: 3, name: 'Bluetooth Hoparlör', price: 200, image: 'https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/55525/uploads/urunresimleri/buyuk/e2c81569-e448-46b2-8fed-9df37cc3b1fa-0-95fe.png' },
+    { id: 4, name: 'Taşınabilir Şarj Cihazı', price: 120, image: 'https://png.pngtree.com/png-vector/20240601/ourmid/pngtree-powerbanks-with-in-built-data-connectivity-png-image_12595333.png' },
+    { id: 5, name: 'Dizüstü Bilgisayar', price: 5000, image: 'https://www.pngarts.com/files/4/HP-Laptop-Transparent.png' },
+    { id: 6, name: 'Tablet', price: 3000, image: 'https://www.pngarts.com/files/1/Apple-Tablet-Transparent-Image.png' },
   ];
 
   return (
@@ -97,7 +97,7 @@ const Products = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {products.map((product) => (
           <div key={product.id} className="border rounded-2xl p-4 shadow hover:shadow-lg transition">
-            <img src={product.image} alt={product.name} className="w-full h-40 object-cover mb-4 rounded" />
+            <img src={product.image} alt={product.name} className="w-full h-40 object-contain mb-4 rounded bg-white" />
             <h3 className="text-lg font-medium mb-2">{product.name}</h3>
             <p className="text-gray-600 mb-4">Fiyat: {product.price} TL</p>
             <button onClick={() => addToCart(product)} className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 w-full">Sepete Ekle</button>
